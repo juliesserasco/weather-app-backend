@@ -15,15 +15,13 @@ class Kernel extends ConsoleKernel
      */
 
     protected $commands = [
-        Commands\UnverifiedExpiry::class,
-        Commands\JobseekerToRemoteWorker::class,
+        
     ];
 
 
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('unverified:daily')->dailyAt('07:00')->timezone('Asia/Manila');
-        $schedule->command('jobseeker:remoteworker')->dailyAt('07:00')->timezone('Asia/Manila');
+        
     }
 
     /**
